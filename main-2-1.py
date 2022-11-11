@@ -1,5 +1,7 @@
 
-# Draws a single poing on the screen
+"""
+Draws a single poing on the screen
+"""
 
 from core.base import Base
 

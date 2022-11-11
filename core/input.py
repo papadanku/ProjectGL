@@ -9,7 +9,7 @@ class Input(object):
 
     def update(self):
         """
-        iterate all over user input events (such as keyboard or mouse)
+        Iterate all over user input events (such as keyboard or mouse)
         that occured since the last time events were checked
         """
         for event in pygame.event.get():

@@ -1,5 +1,7 @@
 
-# Sets base program for other files to inherit
+"""
+Sets base program for other files to inherit
+"""
 
 import pygame
 import sys
