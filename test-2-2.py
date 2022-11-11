@@ -1,11 +1,15 @@
 
+"""
+Draws a single point on the screen
+"""
+
 from OpenGL.GL import *
 
 from core.base import Base
 from core.openGLUtils import OpenGLUtils
 
 # Render a single point
-# papadanku: We inherit the Base class and extent its functionality
+# papadanku: We inherit the Base class and extend its functionality
 class Test(Base):
 
     def initialize(self):

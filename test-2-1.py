@@ -1,6 +1,6 @@
 
 """
-Draws a single poing on the screen
+Draws the screen
 """
 
 from core.base import Base
