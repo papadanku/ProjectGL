@@ -7,7 +7,7 @@ from OpenGL.GL import *
 
 """
 Static methods to load and compile OpenGL shaders and link to create programs
-papadanku: Remember @staticmethod means that 
+NOTE: Remember @staticmethod means that 
 """
 class OpenGLUtils(object):
 
@@ -15,20 +15,21 @@ class OpenGLUtils(object):
     def initializeShader(shaderCode, shaderType):
         """
         Compiles shader and checks to see if compilation was successful
+        Returns the shader's information plus its reference number
         """
         
         # Specify required OpenGL/GLSL version
         shaderCode = '#version 330\n' + shaderCode
 
         # Create an empty shader object and its return reference value
-        # papadanku: we need this so OpenGL knows what type of shader its going to compile
+        # NOTE: OpenGL uses glCreateShader() to supply the correct built-in variables when compiling a shader
         shaderReference = glCreateShader(shaderType)
 
         # Store the source code in the shader object
         glShaderSource(shaderReference, shaderCode)
 
         # Compile the shader object
-        # papadanku: glCompileShader() also stores the compilation status into the shader object
+        # NOTE: glCompileShader() also stores the compilation status into the shader object
         glCompileShader(shaderReference)
 
         # Queries whether shader compilation was successful
@@ -48,21 +49,22 @@ class OpenGLUtils(object):
             raise Exception(errorMessage)
         
         # Compilation was successful; return shader's reference value
-        # papadanku: The shaderReference value is the shader object's ID
+        # NOTE: The shaderReference value is the shader object's ID
         return shaderReference
 
     @staticmethod
     def initializeProgram(vertexShaderCode, fragmentShaderCode):
         """
         Creates a program by linking the vertex and fragment shaders together
+        Returns the program's information plus its reference number
         """
-
-        # papadanku: Compile the vertex and fragment shaders, and get their reference value
-        vertexShaderReference = OpenGLUtils.initializeShader(vertexShaderCode, GL_VERTEX_SHADER)
-        fragmentShaderReference = OpenGLUtils.initializeShader(fragmentShaderCode, GL_FRAGMENT_SHADER)
 
         # Create an empty program object and store reference to it
         programReference = glCreateProgram()
+
+        # NOTE: Compile the vertex and fragment shaders, and get their reference value
+        vertexShaderReference = OpenGLUtils.initializeShader(vertexShaderCode, GL_VERTEX_SHADER)
+        fragmentShaderReference = OpenGLUtils.initializeShader(fragmentShaderCode, GL_FRAGMENT_SHADER)
 
         # Attach the vertex and fragment shaders to the program
         glAttachShader(programReference, vertexShaderReference)
@@ -88,7 +90,7 @@ class OpenGLUtils(object):
             raise Exception(errorMessage)
         
         # Linking was successful, return program's reference value
-        # papadanku: The programReference value is the program object's ID
+        # NOTE: The programReference value is the program object's ID
         return programReference
 
     @staticmethod
