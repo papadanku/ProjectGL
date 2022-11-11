@@ -12,7 +12,7 @@ papadanku: Remember @staticmethod means that
 class OpenGLUtils(object):
 
     @staticmethod
-    def initializeShader(self, shaderCode, shaderType):
+    def initializeShader(shaderCode, shaderType):
         """
         Compiles shader and checks to see if compilation was successful
         """
@@ -20,12 +20,16 @@ class OpenGLUtils(object):
         # Specify required OpenGL/GLSL version
         shaderCode = '#version 330\n' + shaderCode
 
-        # Create and empty shader object and its return reference value
+        # Create an empty shader object and its return reference value
         # papadanku: we need this so OpenGL knows what type of shader its going to compile
         shaderReference = glCreateShader(shaderType)
 
         # Store the source code in the shader object
         glShaderSource(shaderReference, shaderCode)
+
+        # Compile the shader object
+        # papadanku: glCompileShader() also stores the compilation status into the shader object
+        glCompileShader(shaderReference)
 
         # Queries whether shader compilation was successful
         compileSuccess = glGetShaderiv(shaderReference, GL_COMPILE_STATUS)
@@ -37,7 +41,7 @@ class OpenGLUtils(object):
             # Free memory used to store shader program
             glDeleteShader(shaderReference)
 
-            # Convert bye string to character string
+            # Convert byte string to character string
             errorMessage = '\n' + errorMessage.decode('utf-8')
 
             # Raise exception: halt program and print error message
