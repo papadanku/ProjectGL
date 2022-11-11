@@ -69,3 +69,6 @@ class Attribute(object):
             glVertexAttribPointer(variableReference, 4, GL_FLOAT, False, 0, None)
         else:
             raise Exception("Attribute " + variableName + " has unknown type " + self.dataType)
+
+        # Indicate that data will be streamed to this variable
+        glEnableVertexAttribArray(variableReference)

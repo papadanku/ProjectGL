@@ -1,9 +1,9 @@
 
+from OpenGL.GL import *
 
 from core.base import Base
 from core.openGLUtils import OpenGLUtils
 from core.attribute import Attribute
-from OpenGL.GL import *
 
 # Render six points in a hexagon arrangement
 
