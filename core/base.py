@@ -4,6 +4,8 @@
 import pygame
 import sys
 
+from core.input import Input
+
 class Base(object):
 
     # initialize the object's display attributes
@@ -33,6 +35,9 @@ class Base(object):
 
         # manage time-related data and operations
         self.clock = pygame.time.Clock()
+
+        # manage user input
+        self.input = Input()
     
     # implement by extending class
     def initialize(self):
@@ -51,6 +56,11 @@ class Base(object):
         while self.running:
 
             ## process input ##
+            self.input.update()
+
+            # if the user entered a quit input, then stop the application from running
+            if self.input.quit:
+                self.running = False
 
             ## update ##
             self.update()
