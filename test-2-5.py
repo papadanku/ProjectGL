@@ -1,4 +1,8 @@
 
+"""
+Prototype vertex coloring by passing 
+"""
+
 from OpenGL.GL import *
 
 from core.base import Base
@@ -53,7 +57,18 @@ class Test(Base):
         ]
         self.vertexCount = len(positionData)
         positionAttribute = Attribute("vec3", positionData)
-        positionAttribute.associateVariable(self.programReference, "vertexColor")
+        positionAttribute.associateVariable(self.programReference, "position")
+
+        colorData = [
+            [1.0, 0.0, 0.0],
+            [1.0, 0.5, 0.0],
+            [1.0, 1.0, 0.0],
+            [0.0, 1.0, 0.0],
+            [0.0, 0.0, 1.0],
+            [0.5, 0.0, 1.0]
+        ]
+        colorAttribute = Attribute("vec3", colorData)
+        colorAttribute.associateVariable(self.programReference, "vertexColor")
 
     def update(self):
         glUseProgram(self.programReference)
