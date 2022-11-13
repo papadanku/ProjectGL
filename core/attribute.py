@@ -34,7 +34,7 @@ class Attribute(object):
         # Converts data to numpy's array format; converts numbers to 32-bit floats
         data = numpy.array(self.data).astype(numpy.float32)
 
-        # Select the buffer used by the following functions
+        # Create/select the vertex attribute buffer used by the following functions
         # NOTE: GL_ARRAY_BUFFER's purpose is to store vertex attributes
         glBindBuffer(GL_ARRAY_BUFFER, self.bufferReference)
 
