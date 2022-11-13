@@ -44,6 +44,11 @@ class Attribute(object):
     def associateVariable(self, programReference, variableName):
         """
         Function that associates the variable with a GPU's vertex attribute buffer
+        1. Get the attribute's location data and its name
+        2. Activate the array buffer generated in Attribute()
+        3. Provide the array buffer information on the following:
+            - Where OpenGL can find this buffer
+            - How OpenGL should interpret the memory in this buffer
         """
 
         # Get reference for program variable with given name
@@ -71,4 +76,5 @@ class Attribute(object):
             raise Exception("Attribute " + variableName + " has unknown type " + self.dataType)
 
         # Indicate that data will be streamed to this variable
+        # NOTE: Basically, we enable the vertex attribute array (variableReference)
         glEnableVertexAttribArray(variableReference)
