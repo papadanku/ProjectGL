@@ -72,7 +72,7 @@ class Test(Base):
 
     def update(self):
         glUseProgram(self.programReference)
-        glDrawArrays(GL_POINTS, 0, self.vertexCount)
+        glDrawArrays(GL_TRIANGLE_FAN, 0, self.vertexCount)
 
 # Instantiate this class and run the program
 Test().run()
