@@ -5,7 +5,7 @@ class Uniform(object):
 
     def __init__(self, dataType, data):
         """
-        Initialize the variable's attributes
+        Initialize the instance's members (dataType, data)
         """
 
         # Type of data
@@ -22,6 +22,7 @@ class Uniform(object):
         """
         Get and store the variable's name and location within the program
         """
+
         self.variableReference = glGetUniformLocation(programLocation, variableName)
 
     def uploadData(self):

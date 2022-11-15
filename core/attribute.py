@@ -10,9 +10,9 @@ class Attribute(object):
 
     def __init__(self, dataType, data):
         """
-        - Initializes the object's attributes
+        - Uses the input parameters to initialize the instance's members (dataType, data)
         - Generates a buffer
-        - Stores the data into the buffer
+        - Stores the input data into the buffer
         """
 
         # Type of elements in a data array:
