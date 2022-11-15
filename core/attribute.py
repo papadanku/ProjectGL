@@ -10,7 +10,9 @@ class Attribute(object):
 
     def __init__(self, dataType, data):
         """
-        Function that initializes the object's attributes
+        - Initializes the object's attributes
+        - Generates a buffer
+        - Stores the data into the buffer
         """
 
         # Type of elements in a data array:
@@ -28,7 +30,8 @@ class Attribute(object):
     
     def uploadData(self):
         """
-        Function that uploads the object's data to a GPU's vertex attribute buffer
+        - Converts the object's data
+        - Uploads the object's data to the GPU buffer
         """
 
         # Converts data to numpy's array format; converts numbers to 32-bit floats
@@ -44,11 +47,9 @@ class Attribute(object):
     def associateVariable(self, programReference, variableName):
         """
         Function that associates the variable with a GPU's vertex attribute buffer
-        1. Get the attribute's location data and its name
-        2. Activate the array buffer generated in Attribute()
-        3. Provide the array buffer information on the following:
-            - Where OpenGL can find this buffer
-            - How OpenGL should interpret the memory in this buffer
+        - Get the attribute's name and location within the program 
+        - Activate the array buffer that Attribute() generated 
+        - Provide the array buffer information on OpenGL should interpret this buffer's memory
         """
 
         # Get reference for program variable with given name

@@ -48,7 +48,7 @@ class OpenGLUtils(object):
             # Raise exception: halt program and print error message
             raise Exception(errorMessage)
         
-        # Compilation was successful; return shader's reference value
+        # Compilation was successful; return shader's reference value and its compiled code
         # NOTE: The shaderReference value is the shader object's ID
         return shaderReference
 
