@@ -68,6 +68,8 @@ class Test(Base):
         ### Update data ###
 
         self.baseColor.data[0] = (sin(3 * (self.time)) + 1) / 2
+        self.baseColor.data[1] = (sin(self.time + 2.1) + 1) / 2
+        self.baseColor.data[2] = (sin(self.time + 4.2) + 1) / 2
 
         ### Render scene ###
 
