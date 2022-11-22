@@ -25,7 +25,7 @@ class Attribute(object):
         # Reference of available buffer from the GPU
         self.bufferReference = glGenBuffers(1)
 
-        # Immediately upload data
+        # Immediately upload data to the GPU buffer
         self.uploadData()
     
     def uploadData(self):

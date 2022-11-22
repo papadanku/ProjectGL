@@ -10,70 +10,78 @@ from core.input import Input
 
 class Base(object):
 
-    # initialize the object's display attributes
+    # Initialize the object's display attributes
     def __init__(self, screenSize = [512, 512]):
 
-        # initialize all pygame modules
+        # Initialize all pygame modules
         pygame.init()
 
-        # indicate rendering details
+        # Indicate rendering details
         displayFlags = pygame.DOUBLEBUF | pygame.OPENGL
 
-        # initialize buffers to perform antialiasing
+        # Initialize buffers to perform antialiasing
         pygame.display.gl_set_attribute(pygame.GL_MULTISAMPLEBUFFERS, 1)
         pygame.display.gl_set_attribute(pygame.GL_MULTISAMPLESAMPLES, 4)
 
-        # use a core OpenGL profile for cross-platform compatibility
+        # Use a core OpenGL profile for cross-platform compatibility
         pygame.display.gl_set_attribute(pygame.GL_CONTEXT_PROFILE_MASK, pygame.GL_CONTEXT_PROFILE_CORE)
 
-        # create and display the window
+        # Create and display the window
         self.screen = pygame.display.set_mode(screenSize, displayFlags)
 
-        # set the text that appears in the title bar of the window
+        # Set the text that appears in the title bar of the window
         pygame.display.set_caption("Graphics Window")
 
-        # determine if main loop is active
+        # Determine if main loop is active
         self.running = True
 
-        # manage time-related data and operations
+        # Manage time-related data and operations
         self.clock = pygame.time.Clock()
 
-        # manage user input
+        # Manage user input
         self.input = Input()
+
+        # Number of seconds the application has been running
+        self.time = 0
     
-    # implement by extending class
+    # Implement by extending class
     def initialize(self):
         pass
 
-    # implement by extending class
+    # Implement by extending class
     def update(self):
         pass
 
     def run(self):
 
-        ## startup ##
+        ## Startup ##
         self.initialize()
 
-        ## main loop ##
+        ## Main loop ##
         while self.running:
 
-            ## process input ##
+            ## Process input ##
             self.input.update()
 
-            # if the user entered a quit input, then stop the application from running
+            # If the user entered a quit input, then stop the application from running
             if self.input.quit:
                 self.running = False
 
-            ## update ##
+            # Seconds since iteration of run loop
+            self.deltaTime = self.clock.get_time() / 1000
+            # Increment time application has been running
+            self.time += self.deltaTime
+
+            ## Update ##
             self.update()
 
-            ## render ##
-            # display image on screen
+            ## Render ##
+            # Display image on screen
             pygame.display.flip()
 
-            # pause if necessary to achive 60fps
+            # Pause if necessary to achive 60fps
             self.clock.tick(60)
         
-        ## shutdown ##
+        ## Shutdown ##
         pygame.quit()
         sys.exit()

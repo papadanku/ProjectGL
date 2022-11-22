@@ -18,12 +18,12 @@ class Uniform(object):
         # Location for variable location in the program
         self.variableReference = None
 
-    def locateVariable(self, programLocation, variableName):
+    def locateVariable(self, programReference, variableName):
         """
         Get and store the variable's name and location within the program
         """
 
-        self.variableReference = glGetUniformLocation(programLocation, variableName)
+        self.variableReference = glGetUniformLocation(programReference, variableName)
 
     def uploadData(self):
         """
