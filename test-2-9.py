@@ -67,8 +67,7 @@ class Test(Base):
 
         ### Update data ###
 
-        self.translation.data[0] = 0.75 * cos(self.time)
-        self.translation.data[1] = 0.75 * sin(self.time)
+        self.baseColor.data[0] = (sin(3 * (self.time)) + 1) / 2
 
         ### Render scene ###
 

@@ -72,7 +72,7 @@ class Test(Base):
 
         if self.translation.data[0] > 1.2:
             self.translation.data[0] = -1.2
-        
+
         ### Render scene ###
 
         # Reset the color buffer with specified color
