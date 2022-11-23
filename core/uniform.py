@@ -18,6 +18,7 @@ class Uniform(object):
         # Location for variable location in the program
         self.variableReference = None
 
+    # This is a seperate function because we do not want to locate the uniform variable in each update
     def locateVariable(self, programReference, variableName):
         """
         Get and store the variable's name and location within the program
