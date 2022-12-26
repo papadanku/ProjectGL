@@ -1,14 +1,10 @@
 
 """
-Static functions to compile GLSL shaders
+Module for static methods to load and compile OpenGL shaders and link to create programs
 """
 
 from OpenGL.GL import *
 
-"""
-Static methods to load and compile OpenGL shaders and link to create programs
-NOTE: Remember @staticmethod means that 
-"""
 class OpenGLUtils(object):
 
     @staticmethod

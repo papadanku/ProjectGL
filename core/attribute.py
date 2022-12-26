@@ -1,6 +1,6 @@
 
 """
-Processes application's vertex attibutes
+Module for processing application's vertex attibutes
 """
 
 import numpy

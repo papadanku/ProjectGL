@@ -1,4 +1,13 @@
 
+"""
+Module for generating the following transformation matricies:
+- Identity
+- Translation
+- Rotation
+- Scale
+- Perspective
+"""
+
 import numpy
 from math import sin, cos, tan, pi
 
@@ -65,7 +74,7 @@ class Matrix(object):
         ]).astype(float)
     
     @staticmethod
-    def makePerspective(angleOfView = 60, aspectRatio = 1, near = 0.1, far = 1000):
+    def makePerspective(angleOfView=60, aspectRatio=1, near=0.1, far=1000):
         a = angleOfView * pi/180.0
         d = 1.0 / tan(a/2)
         r = aspectRatio
@@ -77,5 +86,3 @@ class Matrix(object):
             [0,   0,  b, c],
             [0,   0, -1, 0]
         ]).astype(float)
-
-

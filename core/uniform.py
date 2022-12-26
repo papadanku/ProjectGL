@@ -4,10 +4,6 @@ from OpenGL.GL import *
 class Uniform(object):
 
     def __init__(self, dataType, data):
-        """
-        Initialize the instance's members (dataType, data)
-        """
-
         # Type of data
         # int | bool | float | vec2 | vec3 | vec4
         self.dataType = dataType

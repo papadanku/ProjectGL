@@ -1,6 +1,6 @@
 
 """
-Sets base program for other files to inherit
+Module for setting a base program for other files to inherit
 """
 
 import pygame
