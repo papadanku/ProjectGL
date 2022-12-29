@@ -74,12 +74,12 @@ class Matrix(object):
         ]).astype(float)
     
     @staticmethod
-    def makePerspective(angleOfView=60, aspectRatio=1, near=0.1, far=1000):
+    def makePerspective(angleOfView=60.0, aspectRatio=1.0, near=0.1, far=1000.0):
         a = angleOfView * pi/180.0
-        d = 1.0 / tan(a/2)
+        d = 1.0 / tan(a/2.0)
         r = aspectRatio
         b = (far + near) / (near - far)
-        c = 2*far*near / (near - far)
+        c = 2.0*far*near / (near - far)
         return numpy.array([
             [d/r, 0,  0, 0],
             [0,   d,  0, 0],

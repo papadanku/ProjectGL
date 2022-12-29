@@ -14,7 +14,6 @@ class SurfaceMaterial(BasicMaterial):
         # Setup BasicMaterial properties
         super().__init__()
 
-
         ### Setup default surfaceMaterial settings ###
 
         # Render verticies as surface
@@ -23,7 +22,7 @@ class SurfaceMaterial(BasicMaterial):
         # NOTE: verticies ordered counterclockwise
         self.settings["doubleSide"] = False
         # Render triangles as wireframe?
-        self.settings["doubleSide"] = False
+        self.settings["wireframe"] = False
         # Line thickness for wireframe rendering
         self.settings["lineWidth"] = 1
 

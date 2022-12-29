@@ -5,7 +5,7 @@ from numpy.linalg import inv
 
 class Camera(Object3D):
 
-    def __init__(self, angleOfView=60, aspectRatio=1, near=0.1, far=1000):
+    def __init__(self, angleOfView=60.0, aspectRatio=1.0, near=0.1, far=1000.0):
         super().__init__()
         self.projectionMatrix = Matrix.makePerspective(angleOfView, aspectRatio, near, far)
         self.viewMatrix = Matrix.makeIdentity()
