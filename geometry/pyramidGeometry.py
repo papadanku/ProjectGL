@@ -1,6 +1,6 @@
 
 """
-Expands the CylindricalGeometry class to generate pyramid geometry
+Extends the CylindricalGeometry class to generate pyramid geometry
 """
 
 from geometry.cylindricalGeometry import CylindricalGeometry

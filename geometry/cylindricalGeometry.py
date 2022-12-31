@@ -1,6 +1,6 @@
 
 """
-Expands the ParametricGeometry class to generate cylindrical geometry
+Extends the ParametricGeometry class to generate cylindrical geometry
 """
 
 from math import sin, cos, pi

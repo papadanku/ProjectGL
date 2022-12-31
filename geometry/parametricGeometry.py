@@ -1,6 +1,6 @@
 
 """
-Expands the Geometry class to generate parametric geometry
+Extends the Geometry class to generate parametric geometry
 """
 
 from geometry.geometry import Geometry

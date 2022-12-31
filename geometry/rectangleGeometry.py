@@ -1,6 +1,6 @@
 
 """
-Expands the Geometry class to generate rectangle geometry
+Extends the Geometry class to generate rectangle geometry
 """
 
 from geometry.geometry import Geometry

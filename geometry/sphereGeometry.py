@@ -1,6 +1,6 @@
 
 """
-Expands the EllipsoidGeometry class to generate a spherical geometry
+Extends the EllipsoidGeometry class to generate a spherical geometry
 """
 
 from math import sin, cos, pi

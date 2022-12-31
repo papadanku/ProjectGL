@@ -1,6 +1,6 @@
 
 """
-Expands the ParametricGeometry class to generate ellipsoid geometry
+Extends the ParametricGeometry class to generate ellipsoid geometry
 """
 
 from math import sin, cos, pi

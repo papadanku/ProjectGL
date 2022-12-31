@@ -1,6 +1,6 @@
 
 """
-Expands the ParametricGeometry class to generate plane geometry
+Extends the ParametricGeometry class to generate plane geometry
 """
 
 from geometry.parametricGeometry import ParametricGeometry

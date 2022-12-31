@@ -1,6 +1,6 @@
 
 """
-Expands the CylindricalGeometry class to generate cylinder geometry
+Extends the CylindricalGeometry class to generate cylinder geometry
 """
 
 from geometry.cylindricalGeometry import CylindricalGeometry

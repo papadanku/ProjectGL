@@ -1,6 +1,6 @@
 
 """
-Expands the Geometry class to generate polygon geometry
+Extends the Geometry class to generate polygon geometry
 """
 
 from math import sin, cos, pi

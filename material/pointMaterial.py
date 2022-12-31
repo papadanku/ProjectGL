@@ -1,6 +1,6 @@
 
 """
-Expands the BasicMaterial class to create a point material's shaders, uniforms, and render settings
+Extends the BasicMaterial class to create a point material's shaders, uniforms, and render settings
 """
 
 from OpenGL.GL import *
