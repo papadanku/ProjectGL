@@ -8,6 +8,7 @@ from math import sin, cos, pi
 from geometry.parametricGeometry import ParametricGeometry
 
 class EllipsoidGeometry(ParametricGeometry):
+
     def __init__(self, width=1, height=1, depth=1, radiusSegments=32, heightSegments=16):
 
         # Ellipsoid surface function
@@ -19,4 +20,4 @@ class EllipsoidGeometry(ParametricGeometry):
             ]
 
         # We generate a vertically stretched sphere
-        super().__init__(0, 2 * pi, radiusSegments, -pi/2, pi/2, heightSegments, S)
+        super().__init__(0, 2*pi, radiusSegments, -pi/2, pi/2, heightSegments, S)

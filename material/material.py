@@ -14,7 +14,7 @@ from core.uniform import Uniform
 class Material(object):
 
     def __init__(self, vertexShaderCode, fragmentShaderCode):
-
+        
         # Create program using a vertex and fragment shader
         self.programReference = OpenGLUtils.initializeProgram(vertexShaderCode, fragmentShaderCode)
 
@@ -37,8 +37,11 @@ class Material(object):
     def addUniform(self, dataType, variableName, data):
         self.uniforms[variableName] = Uniform(dataType, data)
 
-    # Initialize all uniform variable references
     def locateUniforms(self):
+        """
+        Locates all of the shader program's uniforms
+        """
+
         for variableName, uniformObject in self.uniforms.items():
             uniformObject.locateVariable(self.programReference, variableName)
 
@@ -46,9 +49,12 @@ class Material(object):
     def updateRenderSettings(self):
         pass
 
-    # Convenience method for setting multiple material "properties"
-    # (uniform and render settings values) from a dictionary
+
     def setProperties(self, properties):
+        """
+        # Convenience method for setting multiple material "properties" (uniform and render settings values) from a dictionary
+        """
+        
         for name, data in properties.items():
             # Update uniforms
             if name in self.uniforms.keys():

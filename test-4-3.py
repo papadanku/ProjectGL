@@ -16,7 +16,6 @@ from geometry.geometry import Geometry
 
 from material.pointMaterial import PointMaterial
 from material.lineMaterial import LineMaterial
-from material.surfaceMaterial import SurfaceMaterial
 
 class Test(Base):
 
@@ -28,7 +27,7 @@ class Test(Base):
         self.camera = Camera(aspectRatio=800/600)
         self.camera.setPosition([0, 0, 4])
 
-        # Setup basic geometric objects
+        # Initialize basic geometric objects
         geometry = Geometry()
 
         # Setup geometries' position data

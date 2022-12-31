@@ -1,6 +1,6 @@
 
 """
-Module to create an geometry information
+Module to create and update geometry information
 """
 
 from core.attribute import Attribute
@@ -10,8 +10,7 @@ class Geometry(object):
     def __init__(self):
         """
         Stores attribute objects, indexed by name of the associated variable in shader.
-
-        Shader variable associations setup later and store in the mesh's vertex array object
+        NOTE: Setup attribute associations later and store in the mesh's vertex array object
         """
 
         self.attributes = dict()
@@ -37,8 +36,7 @@ class Geometry(object):
     def applyMatrix(self, matrix, variableName = "variablePosition"):
         """
         Applies a matrix transformation to a list of attributes (mainly vertex positions)
-
-        This is useful for if you want to create a closed top and bottom of a Cylinder
+        NOTE: This is useful for if you want to create a closed top and bottom of a Cylinder
         """
 
         oldPositionData = self.attributes[variableName].data
@@ -63,7 +61,6 @@ class Geometry(object):
     def merge(self, otherGeometry):
         """
         Merge data from attribute of other geometry into this object
-
         NOTE: Requires both geometries to have attributes with same names
         """
 

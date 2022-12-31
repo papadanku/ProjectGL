@@ -21,7 +21,7 @@ class Mesh(Object3D):
         self.visible = True
 
         """
-        Setup associations between adttributes stored
+        Setup associations between attributes stored
         in geometry and shader program stored in material
         """
         self.vaoReference = glGenVertexArrays(1)
