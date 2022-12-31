@@ -30,7 +30,7 @@ class Uniform(object):
         # Exit if the program does not reference the variable
         if self.variableReference == -1:
             return
-        
+
         if self.dataType == "int":
             glUniform1i(self.variableReference, self.data)
         elif self.dataType == "bool":

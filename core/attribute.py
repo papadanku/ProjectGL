@@ -27,7 +27,7 @@ class Attribute(object):
 
         # Immediately upload data to the GPU buffer
         self.uploadData()
-    
+
     def uploadData(self):
         """
         - Converts the object's data
@@ -47,8 +47,8 @@ class Attribute(object):
     def associateVariable(self, programReference, variableName):
         """
         Function that associates the variable with a GPU's vertex attribute buffer
-        - Get the attribute's name and location within the program 
-        - Activate the array buffer that Attribute() generated 
+        - Get the attribute's name and location within the program
+        - Activate the array buffer that Attribute() generated
         - Provide the array buffer information on OpenGL should interpret this buffer's memory
         """
 
@@ -58,7 +58,7 @@ class Attribute(object):
         # If the program does not reference the variable, then exit
         if variableReference == -1:
             return
-        
+
         # Select the buffer used by the following functions
         glBindBuffer(GL_ARRAY_BUFFER, self.bufferReference)
 

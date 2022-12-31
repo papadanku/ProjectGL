@@ -7,11 +7,10 @@ class Input(object):
         # Has the user quit the application?
         self.quit = False
 
-        """
-        Lists to store key states
-            Down, up: Discrete event; lasts for one iteration
-            Pressed: Continuous even, between up and down events
-        """
+        # Lists to store key states
+        # Down, up: Discrete event; lasts for one iteration
+        # Pressed: Continuous even, between up and down events
+
         self.keyDownList = []
         self.keyPressedList = []
         self.keyUpList = []
@@ -49,10 +48,9 @@ class Input(object):
     # Functions to check key states in the list
     def isKeyDown(self, keyCode):
         return keyCode in self.keyDownList
-    
+
     def isKeyPressed(self, keyCode):
         return keyCode in self.keyDownList
-    
+
     def isKeyUp(self, keyCode):
         return keyCode in self.keyUpList
-        

@@ -15,17 +15,17 @@ class Geometry(object):
         """
 
         self.attributes = dict()
-        
+
         # Number of verticies
         self.vertexCount = None
-    
+
     def addAttribute(self, dataType, variableName, data):
         """
         Adds an attribute and its information into a vertex buffer
         """
 
         self.attributes[variableName] = Attribute(dataType, data)
-    
+
     def countVertices(self):
         """
         Returns a number of vertices may be calculated from the length of any Attribute object's data array
@@ -59,7 +59,6 @@ class Geometry(object):
         self.attributes[variableName].data = newPositionData
         # New data must be uploaded
         self.attributes[variableName].uploadData()
-    
 
     def merge(self, otherGeometry):
         """
@@ -72,6 +71,6 @@ class Geometry(object):
             attributeObject.data += otherGeometry.attributes[variableName].data
             # We must upload the new merged data to the vertex buffer object
             attributeObject.uploadData()
-        
+
         # Update the number of verticies
         self.countVertices()

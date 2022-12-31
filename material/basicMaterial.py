@@ -1,6 +1,6 @@
 
 """
-Extension of the material.py module for creating basic material information (shaders, uniforms)
+Module that expands the Material class to create basic material information (shaders, uniforms)
 
 NOTE: We extend this class to create material information for point, line, and triangular surfaces
 """
@@ -32,7 +32,7 @@ class BasicMaterial(Material):
         uniform bool useVertexColors;
         in vec3 color;
         out vec4 fragColor;
-        
+
         void main()
         {
             vec4 tempColor = vec4(baseColor, 1.0);

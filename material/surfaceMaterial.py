@@ -1,6 +1,6 @@
 
 """
-Extension of the basicMaterial.py module for creating a surface material's shaders, uniforms, and render settings
+Module that expands the BasicMaterial class to create a surface material's shaders, uniforms, and render settings
 """
 
 from OpenGL.GL import *
@@ -30,12 +30,12 @@ class SurfaceMaterial(BasicMaterial):
         self.setProperties(properties)
 
     def updateRenderSettings(self):
-        
+
         if self.settings["doubleSide"]:
             glDisable(GL_CULL_FACE)
         else:
             glEnable(GL_CULL_FACE)
-        
+
         if self.settings["wireframe"]:
             glPolygonMode(GL_FRONT_AND_BACK, GL_LINE)
         else:

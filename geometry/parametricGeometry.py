@@ -1,6 +1,6 @@
 
 """
-Module for generating a parametric object's position and color data
+Module that expands the Geometry class to generate parametric geometry
 """
 
 from geometry.geometry import Geometry
@@ -8,7 +8,7 @@ from geometry.geometry import Geometry
 class ParametricGeometry(Geometry):
 
     def __init__(self, uStart, uEnd, uResolution, vStart, vEnd, vResolution, surfaceFunction):
-        
+
         # Generate a set of points on function
         deltaU = (uEnd - uStart) / uResolution
         deltaV = (vEnd - vStart) / vResolution
@@ -22,7 +22,7 @@ class ParametricGeometry(Geometry):
                 v = vStart + vIndex * deltaV
                 vArray.append(surfaceFunction(u,v))
                 positions.append(vArray)
-        
+
         # Store vertex data
         positionData = list()
         colorData = list()
@@ -41,13 +41,13 @@ class ParametricGeometry(Geometry):
                 pD = positions[xIndex+0][yIndex+1]
                 pC = positions[xIndex+1][yIndex+1]
                 positionData += [
-                    pA.copy(), pB.copy(), pC.copy(), 
+                    pA.copy(), pB.copy(), pC.copy(),
                     pA.copy(), pC.copy(), pD.copy()
                 ]
 
                 # Color data
                 colorData += [C1,C2,C3, C4,C5,C6]
-        
+
         self.addAttribute("vec3", "vertexPosition", positionData)
         self.addAttribute("vec3", "vertexColor", colorData)
         self.countVertices()

@@ -50,7 +50,7 @@ class Renderer(object):
             # Update uniforms stored in material
             for variableName, uniformObject in mesh.material.uniforms.items():
                 uniformObject.uploadData()
-            
+
             # Update render settings
             mesh.material.updateRenderSettings()
 

@@ -1,6 +1,6 @@
 
 """
-Module for generating a polygon's position and color data
+Module that expands the Geometry class to generate polygon geometry
 """
 
 from geometry.geometry import Geometry

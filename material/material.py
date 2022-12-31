@@ -1,6 +1,6 @@
 
 """
-Module for creating and updating a geometry's
+Module for creating and updating a geometry's material
 - Shaders
 - Uniform data
 - Render settings
@@ -20,7 +20,7 @@ class Material(object):
         # Store uniform object, indexed by name of associated variable in shader
         self.uniforms = dict()
 
-        # Each shader typicalls contains these uniforms
+        # Each shader typically contains these uniforms
         # Values will be set during render process from mesh or camera.
         # Add additional uniforms by extending classes
         self.uniforms["modelMatrix"] = Uniform("mat4", None)
@@ -31,15 +31,15 @@ class Material(object):
         # Additional settings added by extending classes.
         self.settings = dict()
         self.settings["drawStyle"] = GL_TRIANGLES
-    
+
     def addUniform(self, dataType, variableName, data):
         self.uniforms[variableName] = Uniform(dataType, data)
-    
+
     # Initialize all uniform variable references
     def locateUniforms(self):
         for variableName, uniformObject in self.uniforms.items():
             uniformObject.locateVariable(self.programReference, variableName)
-    
+
     # Configure OpenGL with render settings
     def updateRenderSettings(self):
         pass

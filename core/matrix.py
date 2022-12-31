@@ -21,7 +21,7 @@ class Matrix(object):
             [0, 0, 1, 0],
             [0, 0, 0, 1]
         ]).astype(float)
-    
+
     @staticmethod
     def makeTranslation(x, y, z):
         return numpy.array([
@@ -30,7 +30,7 @@ class Matrix(object):
             [0, 0, 1, z],
             [0, 0, 0, 1]
         ]).astype(float)
-    
+
     @staticmethod
     def makeRotationX(angle):
         c = cos(angle)
@@ -41,7 +41,7 @@ class Matrix(object):
             [0, s,  c, 0],
             [0, 0,  0, 1]
         ]).astype(float)
-    
+
     @staticmethod
     def makeRotationY(angle):
         c = cos(angle)
@@ -52,7 +52,7 @@ class Matrix(object):
             [-s, 0, c, 0],
             [ 0, 0, 0, 1]
         ]).astype(float)
-    
+
     @staticmethod
     def makeRotationZ(angle):
         c = cos(angle)
@@ -63,7 +63,7 @@ class Matrix(object):
             [0,  0, 1, 0],
             [0,  0, 0, 1]
         ]).astype(float)
-    
+
     @staticmethod
     def makeScale(s):
         return numpy.array([
@@ -72,7 +72,7 @@ class Matrix(object):
             [0, 0, s, 0],
             [0, 0, 0, 1]
         ]).astype(float)
-    
+
     @staticmethod
     def makePerspective(angleOfView=60.0, aspectRatio=1.0, near=0.1, far=1000.0):
         a = angleOfView * pi/180.0

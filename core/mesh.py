@@ -1,6 +1,6 @@
 
 """
-Module for generating an object's geometry and matrial information 
+Module that extends the Object3D class to generate an object's geometry and matrial information
 """
 
 from core.object3D import Object3D
@@ -9,6 +9,8 @@ from OpenGL.GL import *
 class Mesh(Object3D):
 
     def __init__(self, geometry, material):
+
+        # Create Object3D object for expansion
         super().__init__()
 
         self.geometry = geometry
@@ -26,6 +28,6 @@ class Mesh(Object3D):
 
         for variableName, attributeObject in geometry.attributes.items():
             attributeObject.associateVariable(material.programReference, variableName)
-        
+
         # Unbind this vertex array object
         glBindVertexArray(0)

@@ -1,6 +1,6 @@
 
 """
-Module for generating a cylinder
+Module that expands the CylindricalGeometry class to generate cylinder geometry
 """
 
 from geometry.cylindricalGeometry import CylindricalGeometry

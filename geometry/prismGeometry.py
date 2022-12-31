@@ -1,4 +1,8 @@
 
+"""
+Module that expands the CylindricalGeometry class to generate prism geometry
+"""
+
 from geometry.cylindricalGeometry import CylindricalGeometry
 
 class PrismGeometry(CylindricalGeometry):

@@ -1,6 +1,6 @@
 
 """
-Module for generating planar geometry 
+Module that expands the ParametricGeometry class to generate plane geometry
 """
 
 from geometry.parametricGeometry import ParametricGeometry

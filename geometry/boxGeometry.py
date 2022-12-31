@@ -1,4 +1,8 @@
 
+"""
+Module that expands the Geometry class to generate box geometry
+"""
+
 from geometry.geometry import Geometry
 
 class BoxGeometry(Geometry):

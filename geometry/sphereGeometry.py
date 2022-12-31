@@ -1,6 +1,6 @@
 
 """
-Module for generating a spherical geometry
+Module that expands the EllipsoidGeometry class to generate a spherical geometry
 """
 
 from geometry.ellipsoidGeometry import EllipsoidGeometry

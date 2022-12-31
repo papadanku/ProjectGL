@@ -1,6 +1,6 @@
 
 """
-Extension of the basicMaterial.py module for creating a line material's shaders, uniforms, and render settings
+Module that expands the BasicMaterial class to create a line material's shaders, uniforms, and render settings
 """
 
 from OpenGL.GL import *
@@ -10,7 +10,7 @@ from material.basicMaterial import BasicMaterial
 class LineMaterial(BasicMaterial):
 
     def __init__(self, properties=dict()):
-        
+
         # Setup BasicMaterial properties
         super().__init__()
 
@@ -27,7 +27,7 @@ class LineMaterial(BasicMaterial):
         self.setProperties(properties)
 
     def updateRenderSettings(self):
-        
+
         glLineWidth(self.settings["lineWidth"])
 
         if self.settings["lineType"] == "connected":

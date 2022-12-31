@@ -43,7 +43,7 @@ class Base(object):
 
         # Number of seconds the application has been running
         self.time = 0
-    
+
     # Implement by extending class
     def initialize(self):
         pass
@@ -81,7 +81,7 @@ class Base(object):
 
             # Pause if necessary to achive 60fps
             self.clock.tick(60)
-        
+
         ## Shutdown ##
         pygame.quit()
         sys.exit()

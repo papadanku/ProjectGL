@@ -1,4 +1,8 @@
 
+"""
+Module that expands the Geometry class to generate rectangle geometry
+"""
+
 from geometry.geometry import Geometry
 
 class RectangleGeometry(Geometry):

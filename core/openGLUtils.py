@@ -13,7 +13,7 @@ class OpenGLUtils(object):
         Compiles shader and checks to see if compilation was successful
         Returns the shader's information plus its reference number
         """
-        
+
         # Specify required OpenGL/GLSL version
         shaderCode = '#version 330\n' + shaderCode
 
@@ -43,7 +43,7 @@ class OpenGLUtils(object):
 
             # Raise exception: halt program and print error message
             raise Exception(errorMessage)
-        
+
         # Compilation was successful; return shader's reference value and its compiled code
         # NOTE: The shaderReference value is the shader object's ID
         return shaderReference
@@ -84,7 +84,7 @@ class OpenGLUtils(object):
 
             # Raise exception: halt application and print error message
             raise Exception(errorMessage)
-        
+
         # Linking was successful, return program's reference value
         # NOTE: The programReference value is the program object's ID
         return programReference

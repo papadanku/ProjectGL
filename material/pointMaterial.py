@@ -1,6 +1,6 @@
 
 """
-Extension of the basicMaterial.py module for creating a point material's shaders, uniforms, and render settings
+Module that expands the BasicMaterial class to create a point material's shaders, uniforms, and render settings
 """
 
 from OpenGL.GL import *
@@ -13,7 +13,7 @@ class PointMaterial(BasicMaterial):
 
         # Setup BasicMaterial properties
         super().__init__()
-        
+
         ### Setup default pointMaterial settings ###
 
         # Render verticies as points
@@ -25,9 +25,9 @@ class PointMaterial(BasicMaterial):
 
         # Setup properties
         self.setProperties(properties)
-    
+
     def updateRenderSettings(self):
-        
+
         glPointSize(self.settings["pointSize"])
 
         if self.settings["roundedPoints"]:

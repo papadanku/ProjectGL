@@ -9,6 +9,6 @@ class Camera(Object3D):
         super().__init__()
         self.projectionMatrix = Matrix.makePerspective(angleOfView, aspectRatio, near, far)
         self.viewMatrix = Matrix.makeIdentity()
-    
+
     def updateViewMatrix(self):
         self.viewMatrix = inv(self.getWorldMatrix())

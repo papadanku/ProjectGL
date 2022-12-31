@@ -1,6 +1,6 @@
 
 """
-Module for generating a hexigon
+Module that expands the PolygonGeometry class to generate hexagon geometry
 """
 
 from geometry.polygonGeometry import PolygonGeometry

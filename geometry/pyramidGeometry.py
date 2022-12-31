@@ -1,6 +1,6 @@
 
 """
-Module for generating pyramidal geometry
+Module that expands the CylindricalGeometry class to generate pyramid geometry
 """
 
 from geometry.cylindricalGeometry import CylindricalGeometry
