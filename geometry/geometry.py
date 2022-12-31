@@ -1,6 +1,6 @@
 
 """
-Module to create an object's geomatric attributes
+Module to create an geometry information
 """
 
 from core.attribute import Attribute
@@ -28,7 +28,7 @@ class Geometry(object):
 
     def countVertices(self):
         """
-        Returns a number of vertices may be calculated from the length of any Attribute object's data array
+        Returns a number of vertices may be calculated from the length of any attribute object's data array
         """
 
         attrib = list(self.attributes.values())[0]
