@@ -1,6 +1,9 @@
 
 """
-Module that expands the BasicMaterial class to create a surface material's shaders, uniforms, and render settings
+Module that expands the BasicMaterial class to create a surface material's
+- Shaders
+- Uniforms
+- Render settings
 """
 
 from OpenGL.GL import *
