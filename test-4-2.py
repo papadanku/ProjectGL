@@ -1,6 +1,6 @@
 
 """
-Renders a basic scene with a rotating cube
+Renders a basic scene with a geometry that has 3 triangles
 """
 
 from core.base import Base
@@ -26,7 +26,7 @@ class Test(Base):
         # Initialize basic 2D geometry object (Z=0)
         geometry = Geometry()
 
-        # Setup geometry's vertex positions
+        # Setup geometry's vertex positions for 3 triangles
         P0 = [-0.1,  0.1, 0.0]
         P1 = [ 0.0,  0.0, 0.0]
         P2 = [ 0.1,  0.1, 0.0]
@@ -41,7 +41,7 @@ class Test(Base):
 
         geometry.addAttribute("vec3", "vertexPosition", positionData)
 
-        # Setup geometry's vertex colors
+        # Setup geometry's vertex colors for 3 triangles
         R = [1.0, 0.0, 0.0]
         Y = [1.0, 1.0, 0.0]
         G = [0.0, 0.25, 0.0]
@@ -66,8 +66,6 @@ class Test(Base):
         self.scene.add(self.mesh)
     
     def update(self):
-        # self.mesh.rotateY(0.0514)
-        # self.mesh.rotateX(0.0337)
         self.renderer.render(self.scene, self.camera)
         
 # Instantiate this class and run the program
