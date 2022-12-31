@@ -24,11 +24,14 @@ class Test(Base):
         self.camera.setPosition([0, 0, 4])
 
         geometry = BoxGeometry()
-        material = SurfaceMaterial({
-            "useVertexColors" : True,
-            "wireframe": True,
-            "lineWidth": 8
-        })
+        material = SurfaceMaterial(
+            {
+                "useVertexColors" : True,
+                "wireframe": True,
+                "lineWidth": 8.0
+            }
+        )
+
         self.mesh = Mesh(geometry, material)
         self.scene.add(self.mesh)
     

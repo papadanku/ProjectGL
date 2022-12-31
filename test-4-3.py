@@ -13,8 +13,9 @@ from core.camera import Camera
 from core.mesh import Mesh
 
 from geometry.geometry import Geometry
-from geometry.boxGeometry import BoxGeometry
 
+from material.pointMaterial import PointMaterial
+from material.lineMaterial import LineMaterial
 from material.surfaceMaterial import SurfaceMaterial
 
 class Test(Base):
@@ -27,12 +28,37 @@ class Test(Base):
         self.camera = Camera(aspectRatio=800/600)
         self.camera.setPosition([0, 0, 4])
 
-        geometry = BoxGeometry()
-        material = SurfaceMaterial({
-            "useVertexColors" : True
-        })
-        self.mesh = Mesh(geometry, material)
-        self.scene.add(self.mesh)
+        # Setup basic geometric objects
+        geometry = Geometry()
+
+        # Setup geometries' position data
+        # NOTE: Both line and point meshses share the same vertex positions
+        positionData = list()
+        for x in arange(-3.2, 3.2, 0.3):
+            positionData.append([x, sin(x), 0.0])
+        geometry.addAttribute("vec3", "vertexPosition", positionData)
+        geometry.countVertices()
+
+        # Setup geometries' material data
+        pointMaterial = PointMaterial(
+            {
+                "baseColor": [1.0, 1.0, 0.0],
+                "pointSize": 10.0
+            }
+        )
+
+        lineMaterial = LineMaterial(
+            {
+                "baseColor": [1.0, 0.0, 1.0],
+                "lineWidth": 4.0
+            }
+        )
+
+        pointMesh = Mesh(geometry, pointMaterial)
+        lineMesh = Mesh(geometry, lineMaterial)
+        self.scene.add(pointMesh)
+        self.scene.add(lineMesh)
+
     
     def update(self):
         self.renderer.render(self.scene, self.camera)

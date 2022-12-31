@@ -32,35 +32,33 @@ class Test(Base):
         P2 = [ 0.1,  0.1, 0.0]
         P3 = [-0.2, -0.2, 0.0]
         P4 = [ 0.2, -0.2, 0.0]
-
         positionData = [
             P0, P3, P1,
             P1, P3, P4,
             P1, P4, P2,
         ]
-
         geometry.addAttribute("vec3", "vertexPosition", positionData)
 
         # Setup geometry's vertex colors for 3 triangles
         R = [1.0, 0.0, 0.0]
         Y = [1.0, 1.0, 0.0]
         G = [0.0, 0.25, 0.0]
-
         colorData = [
             R, G, Y,
             Y, G, G,
             Y, G, R,
         ]
-
         geometry.addAttribute("vec3", "vertexColor", colorData)
 
         # Setup geometry's vertex count
         geometry.countVertices()
 
         # Setup geometry's material properties
-        material = SurfaceMaterial({
-            "useVertexColors" : True
-        })
+        material = SurfaceMaterial(
+            {
+                "useVertexColors" : True
+            }
+        )
 
         self.mesh = Mesh(geometry, material)
         self.scene.add(self.mesh)
