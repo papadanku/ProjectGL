@@ -27,9 +27,11 @@ class Geometry(object):
 
     def countVertices(self):
         """
-        Returns a number of vertices may be calculated from the length of any attribute object's data array
+        Returns a number of vertices
+        NOTE: Calculated from the length of the first attribute in the object's data array
         """
 
+        # Select the first attribute in the object's data array 
         attrib = list(self.attributes.values())[0]
         self.vertexCount = len(attrib.data)
 
