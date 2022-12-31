@@ -1,6 +1,6 @@
 
 """
-Module that expands the BasicMaterial class to create a line material's shaders, uniforms, and render settings
+Expands the BasicMaterial class to create a line material's shaders, uniforms, and render settings
 """
 
 from OpenGL.GL import *

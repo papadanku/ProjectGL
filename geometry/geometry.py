@@ -1,6 +1,6 @@
 
 """
-Module for generating an object's geomatric attributes
+Module to create an object's geomatric attributes
 """
 
 from core.attribute import Attribute

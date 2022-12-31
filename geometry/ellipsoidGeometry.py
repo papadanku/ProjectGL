@@ -1,6 +1,6 @@
 
 """
-Module that expands the ParametricGeometry class to generate ellipsoid geometry
+Expands the ParametricGeometry class to generate ellipsoid geometry
 """
 
 from geometry.parametricGeometry import ParametricGeometry

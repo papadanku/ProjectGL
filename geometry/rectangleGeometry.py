@@ -1,6 +1,6 @@
 
 """
-Module that expands the Geometry class to generate rectangle geometry
+Expands the Geometry class to generate rectangle geometry
 """
 
 from geometry.geometry import Geometry

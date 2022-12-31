@@ -1,6 +1,6 @@
 
 """
-Module that expands the Geometry class to generate polygon geometry
+Expands the Geometry class to generate polygon geometry
 """
 
 from geometry.geometry import Geometry

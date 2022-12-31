@@ -1,6 +1,6 @@
 
 """
-Module that expands the Geometry class to generate box geometry
+Expands the Geometry class to generate box geometry
 """
 
 from geometry.geometry import Geometry

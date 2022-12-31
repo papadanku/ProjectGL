@@ -1,6 +1,6 @@
 
 """
-Module that expands the Material class to create basic material information (shaders, uniforms)
+Expands the Material class to create basic material information (shaders, uniforms)
 
 NOTE: We extend this class to create material information for point, line, and triangular surfaces
 """

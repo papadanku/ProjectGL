@@ -1,6 +1,6 @@
 
 """
-Module for creating and updating a geometry's material
+Module to create and update a geometry's material
 - Shaders
 - Uniform data
 - Render settings

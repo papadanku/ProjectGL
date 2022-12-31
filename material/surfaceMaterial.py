@@ -1,6 +1,6 @@
 
 """
-Module that expands the BasicMaterial class to create a surface material's
+Expands the BasicMaterial class to create a surface material's
 - Shaders
 - Uniforms
 - Render settings
