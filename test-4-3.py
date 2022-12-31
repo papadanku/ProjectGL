@@ -40,6 +40,7 @@ class Test(Base):
         geometry.countVertices()
 
         # Setup geometries' material data
+        # NOTE: We use the baseColor uniform instead of the vertexColor attributes
         pointMaterial = PointMaterial(
             {
                 "baseColor": [1.0, 1.0, 0.0],

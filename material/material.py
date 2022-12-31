@@ -15,20 +15,22 @@ class Material(object):
 
     def __init__(self, vertexShaderCode, fragmentShaderCode):
 
-        self.programReference= OpenGLUtils.initializeProgram(vertexShaderCode, fragmentShaderCode)
+        # Create program using a vertex and fragment shader
+        self.programReference = OpenGLUtils.initializeProgram(vertexShaderCode, fragmentShaderCode)
 
         # Store uniform object, indexed by name of associated variable in shader
+        # NOTE: Additional uniforms added by extending the class.
         self.uniforms = dict()
 
         # Each shader typically contains these uniforms
-        # Values will be set during render process from mesh or camera.
-        # Add additional uniforms by extending classes
+        # NOTE: Values will be set during render process from mesh or camera.
+        # NOTE: Add additional uniforms by extending classes
         self.uniforms["modelMatrix"] = Uniform("mat4", None)
         self.uniforms["viewMatrix"] = Uniform("mat4", None)
         self.uniforms["projectionMatrix"] = Uniform("mat4", None)
 
         # Store OpenGL render settings, indexed by variable name.
-        # Additional settings added by extending classes.
+        # NOTE: Additional settings added by extending the class.
         self.settings = dict()
         self.settings["drawStyle"] = GL_TRIANGLES
 
