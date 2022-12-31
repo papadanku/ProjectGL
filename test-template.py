@@ -10,6 +10,7 @@ from core.camera import Camera
 from core.mesh import Mesh
 
 from geometry.boxGeometry import BoxGeometry
+
 from material.surfaceMaterial import SurfaceMaterial
 
 class Test(Base):
@@ -24,14 +25,16 @@ class Test(Base):
 
         geometry = BoxGeometry()
         material = SurfaceMaterial({
-            "useVertexColors" : True
+            "useVertexColors" : True,
+            "wireframe": True,
+            "lineWidth": 8
         })
         self.mesh = Mesh(geometry, material)
         self.scene.add(self.mesh)
     
     def update(self):
-        # self.mesh.rotateY(0.0514)
-        # self.mesh.rotateX(0.0337)
+        self.mesh.rotateY(0.0514)
+        self.mesh.rotateX(0.0337)
         self.renderer.render(self.scene, self.camera)
         
 # Instantiate this class and run the program

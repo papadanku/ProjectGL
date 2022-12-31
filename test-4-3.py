@@ -3,12 +3,16 @@
 Renders a basic scene with a rotating cube
 """
 
+from math import sin
+from numpy import arange
+
 from core.base import Base
 from core.renderer import Renderer
 from core.scene import Scene
 from core.camera import Camera
 from core.mesh import Mesh
 
+from geometry.geometry import Geometry
 from geometry.boxGeometry import BoxGeometry
 
 from material.surfaceMaterial import SurfaceMaterial
@@ -25,16 +29,12 @@ class Test(Base):
 
         geometry = BoxGeometry()
         material = SurfaceMaterial({
-            "useVertexColors" : True,
-            "wireframe": True,
-            "lineWidth": 8
+            "useVertexColors" : True
         })
         self.mesh = Mesh(geometry, material)
         self.scene.add(self.mesh)
     
     def update(self):
-        self.mesh.rotateY(0.0514)
-        self.mesh.rotateX(0.0337)
         self.renderer.render(self.scene, self.camera)
         
 # Instantiate this class and run the program

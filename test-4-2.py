@@ -10,7 +10,7 @@ from core.camera import Camera
 from core.mesh import Mesh
 
 from geometry.geometry import Geometry
-from geometry.boxGeometry import BoxGeometry
+
 from material.surfaceMaterial import SurfaceMaterial
 
 class Test(Base):

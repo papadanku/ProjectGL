@@ -3,8 +3,9 @@
 Expands the Geometry class to generate polygon geometry
 """
 
-from geometry.geometry import Geometry
 from math import sin, cos, pi
+
+from geometry.geometry import Geometry
 
 class PolygonGeometry(Geometry):
 

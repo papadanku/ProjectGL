@@ -3,8 +3,9 @@
 Module that extends the Object3D class to generate an object's geometry and matrial information
 """
 
-from core.object3D import Object3D
 from OpenGL.GL import *
+
+from core.object3D import Object3D
 
 class Mesh(Object3D):
 

@@ -3,8 +3,9 @@
 Module for setting a base program for other files to inherit
 """
 
-import pygame
 import sys
+
+import pygame
 
 from core.input import Input
 

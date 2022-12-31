@@ -7,6 +7,7 @@ This module performs general rendering tasks such as
 """
 
 from OpenGL.GL import *
+
 from core.mesh import Mesh
 
 class Renderer(object):
@@ -26,7 +27,7 @@ class Renderer(object):
         # Update camera view (calculate inverse)
         camera.updateViewMatrix()
 
-        # Extract list of all Mesh object in scene
+        # Extract a list of the scene's mesh objects
         descendantList = scene.getDescendantList()
         meshFilter = lambda x : isinstance(x, Mesh)
         meshList = list(filter(meshFilter, descendantList))

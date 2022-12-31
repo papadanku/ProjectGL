@@ -4,6 +4,7 @@ Expands the ParametricGeometry class to generate cylindrical geometry
 """
 
 from math import sin, cos, pi
+
 from core.matrix import Matrix
 
 from geometry.parametricGeometry import ParametricGeometry

@@ -8,8 +8,9 @@ Module for generating the following transformation matricies:
 - Perspective
 """
 
-import numpy
 from math import sin, cos, tan, pi
+
+import numpy
 
 class Matrix(object):
 

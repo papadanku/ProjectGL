@@ -3,8 +3,9 @@
 Expands the ParametricGeometry class to generate ellipsoid geometry
 """
 
-from geometry.parametricGeometry import ParametricGeometry
 from math import sin, cos, pi
+
+from geometry.parametricGeometry import ParametricGeometry
 
 class EllipsoidGeometry(ParametricGeometry):
     def __init__(self, width=1, height=1, depth=1, radiusSegments=32, heightSegments=16):

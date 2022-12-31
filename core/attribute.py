@@ -4,6 +4,7 @@ Module for processing application's vertex attibutes
 """
 
 import numpy
+
 from OpenGL.GL import *
 
 class Attribute(object):
