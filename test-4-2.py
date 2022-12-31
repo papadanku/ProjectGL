@@ -21,7 +21,7 @@ class Test(Base):
         self.renderer = Renderer()
         self.scene = Scene()
         self.camera = Camera(aspectRatio=800/600)
-        self.camera.setPosition([0, 0, 4])
+        self.camera.setPosition([0, 0, 1])
 
         # Initialize basic 2D geometry object (Z=0)
         geometry = Geometry()
@@ -62,9 +62,9 @@ class Test(Base):
 
         self.mesh = Mesh(geometry, material)
         self.scene.add(self.mesh)
-    
+
     def update(self):
         self.renderer.render(self.scene, self.camera)
-        
+
 # Instantiate this class and run the program
 Test(screenSize=[800,600]).run()

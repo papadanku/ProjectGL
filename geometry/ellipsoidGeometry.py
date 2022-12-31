@@ -14,10 +14,9 @@ class EllipsoidGeometry(ParametricGeometry):
         # Ellipsoid surface function
         def S(u,v):
             return [
-                width/2 * sin(u) * cos(v),
+                 width/2 * sin(u) * cos(v),
                 height/2 * sin(v),
-                depth/2 * cos(u) * cos(v)
+                 depth/2 * cos(u) * cos(v)
             ]
 
-        # We generate a vertically stretched sphere
         super().__init__(0, 2*pi, radiusSegments, -pi/2, pi/2, heightSegments, S)

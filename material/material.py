@@ -49,10 +49,9 @@ class Material(object):
     def updateRenderSettings(self):
         pass
 
-
     def setProperties(self, properties):
         """
-        # Convenience method for setting multiple material "properties" (uniform and render settings values) from a dictionary
+        Convenience method for setting multiple material "properties" (uniform and render settings values) from a dictionary
         """
         
         for name, data in properties.items():

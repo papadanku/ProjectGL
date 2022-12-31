@@ -7,12 +7,11 @@ from core.attribute import Attribute
 
 class Geometry(object):
 
+    # Store attribute objects, indexed by name of the associated variable in shader.
+    # NOTE: Setup attribute associations later and store in the mesh's vertex array object
     def __init__(self):
-        """
-        Stores attribute objects, indexed by name of the associated variable in shader.
-        NOTE: Setup attribute associations later and store in the mesh's vertex array object
-        """
 
+        # Dictionary to store attribute objects
         self.attributes = dict()
 
         # Number of verticies
@@ -32,8 +31,8 @@ class Geometry(object):
         """
 
         # Select the first attribute in the object's data array 
-        attrib = list(self.attributes.values())[0]
-        self.vertexCount = len(attrib.data)
+        attribute = list(self.attributes.values())[0]
+        self.vertexCount = len(attribute.data)
 
     def applyMatrix(self, matrix, variableName = "variablePosition"):
         """

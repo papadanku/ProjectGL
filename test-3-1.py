@@ -67,7 +67,7 @@ class Test(Base):
         self.moveSpeed = 0.5
         # Rotation speed (radians per-second)
         self.turnSpeed = 90 * (pi / 180)
-    
+
     def update(self):
         # Update data
         moveAmount = self.moveSpeed * self.deltaTime
@@ -92,7 +92,7 @@ class Test(Base):
         if self.input.isKeyPressed("x"):
             m = Matrix.makeTranslation(0, 0, -moveAmount)
             self.modelMatrix.data = m @ self.modelMatrix.data
-        
+
         # Global rotation (around the origin)
         if self.input.isKeyPressed("q"):
             m = Matrix.makeRotationZ(turnAmount)
@@ -100,7 +100,7 @@ class Test(Base):
         if self.input.isKeyPressed("e"):
             m = Matrix.makeRotationZ(-turnAmount)
             self.modelMatrix.data = m @ self.modelMatrix.data
-        
+
         # Local translation
         if self.input.isKeyPressed("i"):
             m = Matrix.makeTranslation(0, moveAmount, 0)
@@ -114,7 +114,7 @@ class Test(Base):
         if self.input.isKeyPressed("l"):
             m = Matrix.makeTranslation(moveAmount, 0, 0)
             self.modelMatrix.data = self.modelMatrix.data @ m
-        
+
         # Local rotation (around the object's center)
         if self.input.isKeyPressed("u"):
             m = Matrix.makeRotationZ(turnAmount)
@@ -122,7 +122,7 @@ class Test(Base):
         if self.input.isKeyPressed("o"):
             m = Matrix.makeRotationZ(-turnAmount)
             self.modelMatrix.data = self.modelMatrix.data @ m
-        
+
         ### Render scene ###
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
         glUseProgram(self.programReference)

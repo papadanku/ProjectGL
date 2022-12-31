@@ -59,9 +59,8 @@ class Test(Base):
         self.scene.add(pointMesh)
         self.scene.add(lineMesh)
 
-    
     def update(self):
         self.renderer.render(self.scene, self.camera)
-        
+
 # Instantiate this class and run the program
 Test(screenSize=[800,600]).run()
