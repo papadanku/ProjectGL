@@ -6,7 +6,6 @@ from core.openGLUtils import OpenGLUtils
 from core.attribute import Attribute
 
 # Render six points in a hexagon arrangement
-
 class Test(Base):
 
     def initialize(self):

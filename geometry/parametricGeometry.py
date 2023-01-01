@@ -22,7 +22,7 @@ class ParametricGeometry(Geometry):
             for vIndex in range(vResolution+1):
                 u = uStart + uIndex * deltaU
                 v = vStart + vIndex * deltaV
-                vArray.append(surfaceFunction(u,v))
+                vArray.append(surfaceFunction(u, v))
                 positions.append(vArray)
 
         # Store vertex data
