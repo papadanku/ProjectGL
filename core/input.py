@@ -4,6 +4,7 @@ import pygame
 class Input(object):
 
     def __init__(self):
+
         # Has the user quit the application?
         self.quit = False
 

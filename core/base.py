@@ -12,7 +12,7 @@ from core.input import Input
 class Base(object):
 
     # Initialize the object's display attributes
-    def __init__(self, screenSize = [512, 512]):
+    def __init__(self, screenSize = [512.0, 512.0]):
 
         # Initialize all pygame modules
         pygame.init()

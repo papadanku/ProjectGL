@@ -10,14 +10,14 @@ class BoxGeometry(Geometry):
     def __init__(self, width=1, height=1, depth=1):
         super().__init__()
 
-        P0 = [-width/2, -height/2, -depth/2]
-        P1 = [ width/2, -height/2, -depth/2]
-        P2 = [-width/2,  height/2, -depth/2]
-        P3 = [ width/2,  height/2, -depth/2]
-        P4 = [-width/2, -height/2,  depth/2]
-        P5 = [ width/2, -height/2,  depth/2]
-        P6 = [-width/2,  height/2,  depth/2]
-        P7 = [ width/2,  height/2,  depth/2]
+        P0 = [-width, -height, -depth]
+        P1 = [ width, -height, -depth]
+        P2 = [-width,  height, -depth]
+        P3 = [ width,  height, -depth]
+        P4 = [-width, -height,  depth]
+        P5 = [ width, -height,  depth]
+        P6 = [-width,  height,  depth]
+        P7 = [ width,  height,  depth]
 
         # Colors for faces in order: x+, x-, y+, y-, z+, z-
         C1, C2 = [1.0, 0.5, 0.5], [0.5, 0.0, 0.0]

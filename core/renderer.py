@@ -12,13 +12,13 @@ from core.mesh import Mesh
 
 class Renderer(object):
 
-    def __init__(self, clearColor=[0,0,0]):
+    def __init__(self, clearColor=[0.0, 0.0, 0.0]):
 
         # Enable depth testing
         glEnable(GL_DEPTH_TEST)
         # Required for antialiasing
         glEnable(GL_MULTISAMPLE)
-        glClearColor(clearColor[0], clearColor[1], clearColor[2], 1)
+        glClearColor(clearColor[0], clearColor[1], clearColor[2], 1.0)
 
     def render(self, scene, camera):
         # Clear color and depth buffers

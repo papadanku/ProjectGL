@@ -20,8 +20,8 @@ class Test(Base):
 
         self.renderer = Renderer()
         self.scene = Scene()
-        self.camera = Camera(aspectRatio=800/600)
-        self.camera.setPosition([0, 0, 7])
+        self.camera = Camera(aspectRatio=800.0/600.0)
+        self.camera.setPosition([0.0, 0.0, 7.0])
 
         # Initialize sphere object with a radius of 3
         geometry = SphereGeometry(radius=3)

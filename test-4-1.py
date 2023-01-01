@@ -20,8 +20,8 @@ class Test(Base):
 
         self.renderer = Renderer()
         self.scene = Scene()
-        self.camera = Camera(aspectRatio=800/600)
-        self.camera.setPosition([0, 0, 4])
+        self.camera = Camera(aspectRatio=800.0/600.0)
+        self.camera.setPosition([0.0, 0.0, 4.0])
 
         geometry = BoxGeometry()
         material = SurfaceMaterial(

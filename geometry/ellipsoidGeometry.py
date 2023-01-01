@@ -14,9 +14,9 @@ class EllipsoidGeometry(ParametricGeometry):
         # Ellipsoid surface function
         def S(u,v):
             return [
-                 width/2 * sin(u) * cos(v),
-                height/2 * sin(v),
-                 depth/2 * cos(u) * cos(v)
+                 width * sin(u) * cos(v),
+                height * sin(v),
+                 depth * cos(u) * cos(v)
             ]
 
         super().__init__(0, 2*pi, radiusSegments, -pi/2, pi/2, heightSegments, S)

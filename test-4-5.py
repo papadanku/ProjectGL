@@ -20,8 +20,8 @@ class Test(Base):
 
         self.renderer = Renderer()
         self.scene = Scene()
-        self.camera = Camera(aspectRatio=800/600)
-        self.camera.setPosition([0, 0, 7])
+        self.camera = Camera(aspectRatio=800.0/600.0)
+        self.camera.setPosition([0.0, 0.0, 7.0])
 
         geometry = SphereGeometry(radius=3, radiusSegments=128, heightSegments=64)
 
@@ -56,7 +56,9 @@ class Test(Base):
         void main()
         {
             float r = abs(sin(time));
-            vec4 c = vec4(r, -0.5*r, -0.5*r, 0.0);
+            vec4 c = r * vec4(1.0, -0.5, -0.5, 0.0);
+
+            // Composite a sine of red over vertex color
             fragColor = vec4(color, 1.0) + c;
         }
         """
