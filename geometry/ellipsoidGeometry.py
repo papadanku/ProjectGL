@@ -19,4 +19,4 @@ class EllipsoidGeometry(ParametricGeometry):
                  depth * cos(u) * cos(v)
             ]
 
-        super().__init__(0, 2*pi, radiusSegments, -pi/2, pi/2, heightSegments, S)
+        super().__init__(0, 2.0 * pi, radiusSegments, -pi / 2.0, pi / 2.0, heightSegments, S)

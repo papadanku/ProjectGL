@@ -56,6 +56,7 @@ class Geometry(object):
             newPositionData.append(newPosition)
 
         self.attributes[variableName].data = newPositionData
+
         # New data must be uploaded
         self.attributes[variableName].uploadData()
 

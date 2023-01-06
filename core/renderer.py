@@ -16,11 +16,13 @@ class Renderer(object):
 
         # Enable depth testing
         glEnable(GL_DEPTH_TEST)
+
         # Required for antialiasing
         glEnable(GL_MULTISAMPLE)
         glClearColor(clearColor[0], clearColor[1], clearColor[2], 1.0)
 
     def render(self, scene, camera):
+
         # Clear color and depth buffers
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
 
